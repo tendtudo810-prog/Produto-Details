@@ -34,7 +34,6 @@
         </nav>
     </header>
 
-    <main>
         <div class="foto">
             <img src="img/NBA (1).png " alt="" class="photo">
         </div>
@@ -49,8 +48,62 @@
             <h1 class="tilo">Under Armour Flow Phantom</h1>
             <h2 class="tito">R$ 1.750,00</h2>
         </div>
-    </main>
 
+        <div class="rev">
+            <label for="#" class="review">Review</label>
+            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
+            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
+            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
+            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
+            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
+        </div>
+
+        <div class="colors">
+            <label for="#" class="title">Colors</label>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="brown"></div>
+        </div>
+
+        <div class="desc">
+            <div class="labels">
+                <label for="#" class="lbl active">Description</label>
+                <label for="#" class="lbl-1">Size</label>
+            </div>
+            <p class="de-t">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias voluptas id fuga doloremque beatae fugit ad molestias nihil rem. Eius nostrum dolorum earum, mollitia natus consequatur excepturi architecto recusandae exercitationem voluptatem, id saepe unde praesentium dignissimos nisi voluptate, repellendus quos placeat neque. Sapiente nisi quis expedita nobis repellendus, officia eaque!</p>
+        </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-block footer-brand">
+                <img src="img/ChatGPT Image 24 de jun. de 2026, 18_12_58.png" alt="Under Armour" class="footer-logo">
+                <div>
+                    <p class="footer-title">Under Armour Flow Phantom</p>
+                    <p class="footer-subtitle">Design esportivo, conforto superior e estilo premium em cada passo.</p>
+                </div>
+            </div>
+            <div class="footer-block footer-links">
+                <a href="#">Home</a>
+                <a href="#">New Features</a>
+                <a href="#">Itens</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-block footer-copy">
+                <p>© 2026 Under Armour. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggles = document.querySelectorAll('.lbl, .lbl-1');
+        toggles.forEach(label => {
+            label.addEventListener('click', () => {
+                toggles.forEach(item => item.classList.remove('active'));
+                label.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
