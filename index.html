@@ -49,15 +49,6 @@
             <h2 class="tito">R$ 1.750,00</h2>
         </div>
 
-        <div class="rev">
-            <label for="#" class="review">Review</label>
-            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
-            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
-            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
-            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
-            <i class="fa-solid fa-star" style="color: rgb(228, 176, 5);"></i>
-        </div>
-
         <div class="colors">
             <label for="#" class="title">Colors</label>
             <div class="black"></div>
@@ -65,12 +56,37 @@
             <div class="brown"></div>
         </div>
 
+            <div class="stars">
+                <label for="#" class="rev">Review</label>
+                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+            </div>
+
         <div class="desc">
             <div class="labels">
                 <label for="#" class="lbl active">Description</label>
-                <label for="#" class="lbl-1">Size</label>
+                <label for="#" class="lbl-1"></label>
             </div>
             <p class="de-t">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias voluptas id fuga doloremque beatae fugit ad molestias nihil rem. Eius nostrum dolorum earum, mollitia natus consequatur excepturi architecto recusandae exercitationem voluptatem, id saepe unde praesentium dignissimos nisi voluptate, repellendus quos placeat neque. Sapiente nisi quis expedita nobis repellendus, officia eaque!</p>
+            <div class="size-info">
+                <p class="size-title">Medidas do pé</p>
+                <div class="size-grid">
+                    <button type="button" class="size-box active" data-size="36" data-cm="23,0">36<span>23,0 cm</span></button>
+                    <button type="button" class="size-box" data-size="37" data-cm="23,7">37<span>23,7 cm</span></button>
+                    <button type="button" class="size-box" data-size="38" data-cm="24,5">38<span>24,5 cm</span></button>
+                    <button type="button" class="size-box" data-size="39" data-cm="25,0">39<span>25,0 cm</span></button>
+                    <button type="button" class="size-box" data-size="40" data-cm="25,7">40<span>25,7 cm</span></button>
+                    <button type="button" class="size-box" data-size="40" data-cm="25,7">42<span>26,5 cm</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="f1">
+            <a href="#" class="button">Comprar Produto</a> 
         </div>
 
     <footer class="site-footer">
@@ -96,11 +112,23 @@
     </footer>
 
     <script>
-        const toggles = document.querySelectorAll('.lbl, .lbl-1');
+        const descLabel = document.querySelector('.lbl');
+        const sizeLabel = document.querySelector('.lbl-1');
+        const toggles = [descLabel, sizeLabel];
+
         toggles.forEach(label => {
             label.addEventListener('click', () => {
                 toggles.forEach(item => item.classList.remove('active'));
                 label.classList.add('active');
+            });
+        });
+
+        const sizeBoxes = document.querySelectorAll('.size-box');
+
+        sizeBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                sizeBoxes.forEach(item => item.classList.remove('active'));
+                box.classList.add('active');
             });
         });
     </script>
